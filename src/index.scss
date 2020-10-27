@@ -1,0 +1,198 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Trebuchet MS',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; 
+  background: url("./img/background.jpg"); 
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@font-face {
+  font-family: "Exo2.0";
+  src: url("./font/Exo2.0-Thin.otf") format("opentype");
+}
+
+$defaultColor: rgb(22, 152, 217);
+$defaultHoverColor: rgb(46, 168, 230);
+$selectedColor:rgb(217, 22, 103);
+$selectedHoverColor:rgb(230, 46, 122);
+$disabledColor: rgb(179, 179, 179); //50%непрозрачность картинки и текста
+$disabledTextColor: rgb(255, 255, 102);
+
+.wrapper {  
+  margin: 50px auto;
+  border: 1px solid;
+}
+
+.title { 
+  font-family: "Exo2.0";
+  font-size: 36px;
+  text-align: center;
+  color: white;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  position: relative;
+  width: 320px;
+  height: 480px;
+  margin: 0 auto; 
+  margin-bottom: 70px;
+
+  &:hover:not(.disabled) > .card__poligon {
+    stroke: $defaultHoverColor;    
+  }
+  &:hover:not(.disabled) > .card__circle {
+    background: $defaultHoverColor;
+  }
+  &:hover:not(.disabled) > .card__bottom .card__link {
+    color: $defaultHoverColor;
+  } 
+  
+  &:active:not(.disabled) > .card__poligon {
+    stroke: $selectedColor;    
+  }
+  &:active:not(.disabled) > .card__circle {
+    background: $selectedColor;
+  }
+  &:active:not(.disabled) > .card__bottom .card__link {
+    color: $selectedColor;
+  } 
+}
+
+.card__poligon{
+  position: absolute;
+  z-index: 0;
+  stroke: $defaultColor;
+  box-sizing: border-box;
+
+  &:hover {
+    stroke: $defaultHoverColor;
+  }
+}
+
+.card__text {
+  position: absolute;  
+  width: 215px;
+  margin-left: 50px;
+  text-align: left;
+  font-family: "Trebuchet MS"; 
+  z-index: 1; 
+
+  h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+  }  
+}
+
+.text__info {
+  margin: 0;
+  padding: 15px 0 10px 0;
+  font-size: 16px;
+}
+
+.text__title {
+  margin: 0;
+  font-size: 48px;  
+  font-weight: bold;
+  line-height: 1.2;   
+}
+
+.text__options{
+  margin-top: 25px;
+  font-size: 14px;
+  line-height: 16px;
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.card__img {
+  position: absolute;
+  left: 4px;
+  width: calc(100% - 4px);
+  height: 100%;
+  margin: 0; 
+  opacity: 0,5; 
+  background: url("./img/cat.png");
+  background-repeat: no-repeat;
+  background-position:  50% 200%;
+  overflow: hidden;
+}
+
+.card__circle {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  width: 88px;
+  height: 88px;
+  font-size: 42px;
+  font-family: "Trebuchet MS";
+  line-height: 0.8;   
+  background: $defaultColor;
+  color: rgb(255, 255, 255);
+  outline: none;
+  border: none;
+  border-radius: 50%;  
+}
+
+.card__bottom {
+  position: absolute;
+  bottom: -50px;  
+  width: 100%;
+  font-family: "Trebuchet MS"; 
+  font-size: 13px;
+  line-height: 16px;
+  text-align: center;
+  color: white;
+}
+
+.card__link {  
+  font-weight: bold;
+  color: $defaultColor;
+  text-decoration-style: dotted;
+
+  &:hover:not(.disabled) {
+    color: $defaultHoverColor;
+  }
+
+  &:active {
+    color: $selectedColor;
+  }
+}
+
+.disabled {
+  color: $disabledColor;
+  stroke: $disabledColor;
+  opacity: 0,5;  
+}
+
+.disabled-circle{
+  background-color: $disabledColor;
+  opacity: 0,5;
+}
+
+@media (min-width: 1300px) {
+  .wrapper {
+    width: 1120px;
+  }
+}

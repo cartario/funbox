@@ -33,6 +33,12 @@ $disabledColor: rgb(179, 179, 179);
 $disabledTextColor: rgb(255, 255, 102);
 $textGreyColor: #666666;
 
+.App{
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
 .wrapper {  
   margin: 50px auto;
   border: 1px solid;

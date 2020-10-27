@@ -4,7 +4,8 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Trebuchet MS',
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; 
+  -moz-osx-font-smoothing: grayscale;
+  background-color: black;
   background: url("./img/background.jpg"); 
 }
 
@@ -28,8 +29,9 @@ $defaultColor: rgb(22, 152, 217);
 $defaultHoverColor: rgb(46, 168, 230);
 $selectedColor:rgb(217, 22, 103);
 $selectedHoverColor:rgb(230, 46, 122);
-$disabledColor: rgb(179, 179, 179); //50%непрозрачность картинки и текста
+$disabledColor: rgb(179, 179, 179);
 $disabledTextColor: rgb(255, 255, 102);
+$textGreyColor: #666666;
 
 .wrapper {  
   margin: 50px auto;
@@ -55,23 +57,23 @@ $disabledTextColor: rgb(255, 255, 102);
   margin: 0 auto; 
   margin-bottom: 70px;
 
-  &:hover:not(.disabled) > .card__poligon {
+  &:hover:not(.disabled):not(.active) > .card__poligon {
     stroke: $defaultHoverColor;    
   }
-  &:hover:not(.disabled) > .card__circle {
+  &:hover:not(.disabled):not(.active) > .card__circle {
     background: $defaultHoverColor;
   }
-  &:hover:not(.disabled) > .card__bottom .card__link {
+  &:hover:not(.disabled):not(.active) > .card__bottom .card__link {
     color: $defaultHoverColor;
   } 
   
-  &:active:not(.disabled) > .card__poligon {
+  &:active:not(.disabled):not(.active) > .card__poligon {
     stroke: $selectedColor;    
   }
-  &:active:not(.disabled) > .card__circle {
+  &:active:not(.disabled):not(.active) > .card__circle {
     background: $selectedColor;
   }
-  &:active:not(.disabled) > .card__bottom .card__link {
+  &:active:not(.disabled):not(.active) > .card__bottom .card__link {
     color: $selectedColor;
   } 
 }
@@ -93,7 +95,7 @@ $disabledTextColor: rgb(255, 255, 102);
   margin-left: 50px;
   text-align: left;
   font-family: "Trebuchet MS"; 
-  z-index: 1; 
+  z-index: 1;
 
   h3 {
     margin: 0;
@@ -106,6 +108,7 @@ $disabledTextColor: rgb(255, 255, 102);
   margin: 0;
   padding: 15px 0 10px 0;
   font-size: 16px;
+  color: $textGreyColor;
 }
 
 .text__title {
@@ -119,6 +122,7 @@ $disabledTextColor: rgb(255, 255, 102);
   margin-top: 25px;
   font-size: 14px;
   line-height: 16px;
+  color: $textGreyColor;
 
   p {
     margin: 0;
@@ -131,8 +135,7 @@ $disabledTextColor: rgb(255, 255, 102);
   left: 4px;
   width: calc(100% - 4px);
   height: 100%;
-  margin: 0; 
-  opacity: 0,5; 
+  margin: 0;  
   background: url("./img/cat.png");
   background-repeat: no-repeat;
   background-position:  50% 200%;
@@ -147,7 +150,8 @@ $disabledTextColor: rgb(255, 255, 102);
   height: 88px;
   font-size: 42px;
   font-family: "Trebuchet MS";
-  line-height: 0.8;   
+  line-height: 0.8; 
+  text-align: center;  
   background: $defaultColor;
   color: rgb(255, 255, 255);
   outline: none;
@@ -169,26 +173,49 @@ $disabledTextColor: rgb(255, 255, 102);
 .card__link {  
   font-weight: bold;
   color: $defaultColor;
-  text-decoration-style: dotted;
+  text-decoration-style: dotted; 
+}
 
-  &:hover:not(.disabled) {
-    color: $defaultHoverColor;
+.disabled .card__poligon {  
+  stroke: $disabledColor;   
+}
+.disabled .card__circle {
+  background: $disabledColor;   
+}
+.disabled .card__img, .disabled .card__text {
+  opacity: 0.5;  
+}
+.disabled .card__bottom,
+.disabled .card__link {
+  color: $disabledTextColor;
+}
+
+.active {
+  &:hover > .card__poligon{
+    stroke: $selectedHoverColor;
+  } 
+  &:hover > .card__circle {
+    background: $selectedHoverColor;
   }
-
-  &:active {
-    color: $selectedColor;
+  &:hover > .card__bottom .card__link {
+    color: $selectedHoverColor;
   }
 }
 
-.disabled {
-  color: $disabledColor;
-  stroke: $disabledColor;
-  opacity: 0,5;  
+.active .card__poligon {  
+  stroke: $selectedColor;    
+}
+.active .card__link {  
+  color: $selectedColor;    
+}
+.active .card__circle {
+  background: $selectedColor;   
 }
 
-.disabled-circle{
-  background-color: $disabledColor;
-  opacity: 0,5;
+.noProducts{
+  margin: 0 auto;
+  text-align: center;
+  color: white;
 }
 
 @media (min-width: 1300px) {

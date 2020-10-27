@@ -33,11 +33,6 @@ $disabledColor: rgb(179, 179, 179);
 $disabledTextColor: rgb(255, 255, 102);
 $textGreyColor: #666666;
 
-.App{
-  display: flex;
-  align-items: center;
-  height: 100vh;
-}
 
 .wrapper {  
   margin: 50px auto;
@@ -222,6 +217,14 @@ $textGreyColor: #666666;
   margin: 0 auto;
   text-align: center;
   color: white;
+}
+
+@media (min-width: 1000px){
+  .App{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+  }
 }
 
 @media (min-width: 1300px) {

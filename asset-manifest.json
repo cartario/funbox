@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/funbox/static/css/main.05f3cfe9.chunk.css",
+    "main.css": "/funbox/static/css/main.eb7f0822.chunk.css",
     "main.js": "/funbox/static/js/main.6e608976.chunk.js",
     "main.js.map": "/funbox/static/js/main.6e608976.chunk.js.map",
     "runtime-main.js": "/funbox/static/js/runtime-main.79e19632.js",
@@ -8,14 +8,14 @@
     "static/js/2.c54a59bc.chunk.js": "/funbox/static/js/2.c54a59bc.chunk.js",
     "static/js/2.c54a59bc.chunk.js.map": "/funbox/static/js/2.c54a59bc.chunk.js.map",
     "index.html": "/funbox/index.html",
-    "static/css/main.05f3cfe9.chunk.css.map": "/funbox/static/css/main.05f3cfe9.chunk.css.map",
+    "static/css/main.eb7f0822.chunk.css.map": "/funbox/static/css/main.eb7f0822.chunk.css.map",
     "static/js/2.c54a59bc.chunk.js.LICENSE.txt": "/funbox/static/js/2.c54a59bc.chunk.js.LICENSE.txt",
     "static/media/index.scss": "/funbox/static/media/cat.daaa767b.png"
   },
   "entrypoints": [
     "static/js/runtime-main.79e19632.js",
     "static/js/2.c54a59bc.chunk.js",
-    "static/css/main.05f3cfe9.chunk.css",
+    "static/css/main.eb7f0822.chunk.css",
     "static/js/main.6e608976.chunk.js"
   ]
 }

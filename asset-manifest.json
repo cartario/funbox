@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/cartario/funbox/static/css/main.4f2b3fe3.chunk.css",
+    "main.js": "/cartario/funbox/static/js/main.29c619d8.chunk.js",
+    "main.js.map": "/cartario/funbox/static/js/main.29c619d8.chunk.js.map",
+    "runtime-main.js": "/cartario/funbox/static/js/runtime-main.cc988372.js",
+    "runtime-main.js.map": "/cartario/funbox/static/js/runtime-main.cc988372.js.map",
+    "static/js/2.782d5ae3.chunk.js": "/cartario/funbox/static/js/2.782d5ae3.chunk.js",
+    "static/js/2.782d5ae3.chunk.js.map": "/cartario/funbox/static/js/2.782d5ae3.chunk.js.map",
+    "index.html": "/cartario/funbox/index.html",
+    "static/css/main.4f2b3fe3.chunk.css.map": "/cartario/funbox/static/css/main.4f2b3fe3.chunk.css.map",
+    "static/js/2.782d5ae3.chunk.js.LICENSE.txt": "/cartario/funbox/static/js/2.782d5ae3.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/cartario/funbox/static/media/cat.daaa767b.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cc988372.js",
+    "static/js/2.782d5ae3.chunk.js",
+    "static/css/main.4f2b3fe3.chunk.css",
+    "static/js/main.29c619d8.chunk.js"
+  ]
+}

@@ -1,7 +1,8 @@
-import React, {useState} from 'react';
+import React, {useState, memo} from 'react';
 import {checkClass, checkMouses} from '../utils';
 
 const Card = ({product}) => {
+  
   const {_id: id, info, title, type, items, mouses, weight, extra, description} = product || {};  
   const [active, setActive] = useState(false);
   const disabled = !items;  
@@ -55,4 +56,4 @@ const Card = ({product}) => {
   );
 };
 
-export default Card;
+export default memo(Card);
